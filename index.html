@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Borders and Paddings to HTML Tables</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 2px;
+        }
+        .someclass {
+            width: 80px;
+        }
+        .a{
+            width: 5%;
+        }
+    </style>
+</head>        
+
+    <body>
+        <h2>Table with Separated Borders</h2>
+<div style="display: flex;">
+        <table>
+            <tr>
+                <th colspan="3">First Matrix</th>
+            </tr>
+            <tr>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input1"></td>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input2"></td>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input3"></td>
+            </tr>
+            <tr>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input4"></td>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input5"></td>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input6"></td>
+            </tr>
+            <tr>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input7"></td>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input8"></td>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input9"></td>
+            </tr>
+        </table>
+        <div class="a"></div>
+        <br>
+        <table>
+            <tr>
+                <th colspan="3">Second Matrix</th>
+            </tr>
+            <tr>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input11"></td>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input12"></td>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input13"></td>
+            </tr>
+            <tr>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input14"></td>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input15"></td>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input16"></td>
+            </tr>
+            <tr>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input17"></td>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input18"></td>
+                <td><input class="someclass"  type="number" placeholder="Enter a number:" id="input19"></td>
+            </tr>
+        </table>    
+        <div class="a"></div>
+        <br>
+        <div><br><br><br>
+            <button onclick="generateTable()"> Add Both Matrix Values </button>
+        </div>
+        <br>
+        <br>
+        <div class="a"></div>
+        <table>
+            <tr>
+                <th colspan="3">Result After Adding 2 Matrix</th>
+            </tr>
+            <tr>
+                <td> <div class="someclass"  id="res1"></div> </td>
+                <td> <div class="someclass"  id="res2"></div> </td>
+                <td> <div class="someclass"  id="res3"></div> </td>
+            </tr>
+            <tr>
+                <td> <div class="someclass"  id="res4"></div> </td>
+                <td> <div class="someclass"  id="res5"></div> </td>
+                <td> <div class="someclass"  id="res6"></div> </td>
+            </tr>
+            <tr>
+                <td> <div class="someclass"  id="res7"></div> </td>
+                <td> <div class="someclass"  id="res8"></div> </td>
+                <td> <div class="someclass"  id="res9"></div> </td>
+            </tr>
+        </table>    
+    </div>
+        
+        <script>
+            
+            var inp1, inp2, inp3, inp4, inp5, inp6, inp7, inp8, inp9,
+                inp11, inp12, inp13, inp14, inp15, inp16, inp17, inp18, inp19,
+                result1, result2, result3, 
+                result4, result5, result6, 
+                result7, result8, result9;
+
+            function generateTable() {
+
+                inp1 = parseInt(document.getElementById('input1').value);
+                inp2 = parseInt(document.getElementById('input2').value);
+                inp3 = parseInt(document.getElementById('input3').value);
+                inp4 = parseInt(document.getElementById('input4').value);
+                inp5 = parseInt(document.getElementById('input5').value);
+                inp6 = parseInt(document.getElementById('input6').value);
+                inp7 = parseInt(document.getElementById('input7').value);
+                inp8 = parseInt(document.getElementById('input8').value);
+                inp9 = parseInt(document.getElementById('input9').value);
+                inp11 = parseInt(document.getElementById('input11').value);
+                inp12 = parseInt(document.getElementById('input12').value);
+                inp13 = parseInt(document.getElementById('input13').value);
+                inp14 = parseInt(document.getElementById('input14').value);
+                inp15 = parseInt(document.getElementById('input15').value);
+                inp16 = parseInt(document.getElementById('input16').value);
+                inp17 = parseInt(document.getElementById('input17').value);
+                inp18 = parseInt(document.getElementById('input18').value);
+                inp19 = parseInt(document.getElementById('input19').value);
+
+                result1 = inp1+inp11;
+                document.getElementById('res1').innerText = result1;
+                result2 = inp2+inp12;
+                document.getElementById('res2').innerText = result2;
+                result3 = inp3+inp13;
+                document.getElementById('res3').innerText = result3;
+                result4 = inp4+inp14;
+                document.getElementById('res4').innerText = result4;
+                result5 = inp5+inp15;
+                document.getElementById('res5').innerText = result5;
+                result6 = inp6+inp16;
+                document.getElementById('res6').innerText = result6;
+                result7 = inp7+inp17;
+                document.getElementById('res7').innerText = result7;
+                result8 = inp8+inp18;
+                document.getElementById('res8').innerText = result8;
+                result9 = inp9+inp19;
+                document.getElementById('res9').innerText = result9;
+
+            }
+
+
+        </script>
+    </body>
+    </html
+
